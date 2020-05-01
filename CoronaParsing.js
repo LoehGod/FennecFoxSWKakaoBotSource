@@ -50,7 +50,8 @@ function response(room, msg, sender, isGroupChat, replier) {
       var quarantinedDailyChange = numbers[2].replace(/(<([^>]+)>)/ig, "").replace("전일대비", ""); // 치료중 전일대비
       var deceasedDailyChange = numbers[3].replace(/(<([^>]+)>)/ig, "").replace("전일대비", "") // 사망 전일대비
 
-      // TODO 출력문은 직접 구현할 것. 혹은 이미 구현된 출력문을 여기에 붙여넣기 할것. 기준 날짜를 전달하기 위해 문자열 livedate를 포함해도 좋음
+      // TODO 출력문은 직접 구현할 것. 혹은 이미 구현된 출력문을 여기에 붙여넣기 할것.
+      // 기준 날짜를 전달하기 위해 문자열 livedate를 포함해도 좋음
 
       replier.reply(confirmed + " " + recovered + " " + quarantined + " " + deceased + " " + dailyConfirmed + " " + dailyRecovered + " " + confirmedDailyChange + " " + recoveredDailyChange + " " + quarantinedDailyChange + " " + deceasedDailyChange)
 
