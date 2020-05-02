@@ -1,3 +1,5 @@
+importPackage(org.jsoup)
+
 const CORONA_REGION_MAP = {
   "서울": 7,
   "부산": 8,
@@ -26,7 +28,7 @@ function response(room, msg, sender, isGroupChat, replier) {
   if (msg.startsWith("!코로나") == true) {
 
     var args = msg.split(" ");
-    var doc = org.jsoup.Jsoup.connect("http://ncov.mohw.go.kr/").userAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36").get();
+    var doc = Jsoup.connect("http://ncov.mohw.go.kr/").userAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36").get();
     var livedate = String(doc.select("span.livedate")).split("\n")[0].replace(/(<([^>]+)>)/ig, ""); // 기준 날짜
 
     if (args.length == 1) { // '!코로나'만 입력된 경우
