@@ -40,11 +40,9 @@ function response(room, msg, sender, isGroupChat, replier) {
       var testsPerformed = numbers[4].replace(/(<([^>]+)>)/ig, ""); // 누적 검사수
       var testsConcluded = numbers[5].replace(/(<([^>]+)>)/ig, ""); // 누적 검사완료수
 
-      var number = String(doc.select("span.data1"));
-      var dailyConfirmed = number.replace(/(<([^>]+)>)/ig, "") + "명"; // 일일 확진자
-
-      number = String(doc.select("span.data2"));
-      var dailyRecovered = number.replace(/(<([^>]+)>)/ig, "") + "명"; // 일일 완치자
+      var occurrenceLocation = String(doc.select("span.data")).split("\n");
+      var domesticOccurrence = occurrenceLocation[0].replace(/(<([^>]+)>)/ig, "") + "명"; // 국내 발생
+      var inflowAbroad = occurrenceLocation[1].replace(/(<([^>]+)>)/ig, "") + "명"; // 해외 유입
 
       numbers = String(doc.select("span.before")).split("\n");
       var confirmedDailyChange = numbers[0].replace(/(<([^>]+)>)/ig, "").replace("전일대비", ""); // 확진환자 전일대비
