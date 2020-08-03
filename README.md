@@ -45,3 +45,13 @@ Event, discount, Implication, Enter, and Sports options are all 2 (maximum).
 옵션을 조정하려면 [이곳](https://datalab.naver.com/keyword/realtimeList.naver?)에서 옵션을 조정한 뒤 url변수의 값을 바꿔주시면 됩니다.
 
 You can adjust the options [here](https://datalab.naver.com/keyword/realtimeList.naver?) and change the value of the url variable.
+
+## RockPaperScissors.js
+
+가위바위보를 봇과 할 수 있는 소스입니다.
+
+This is a source that you can play rock paper scissors with a bot.
+
+승패를 알 수 있습니다.
+
+You can see the win or lose.
